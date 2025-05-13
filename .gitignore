@@ -1,0 +1,30 @@
+# WordPress core files 
+/wp-admin/ 
+/wp-includes/ 
+/license.txt 
+/readme.html 
+/xmlrpc.php 
+/wp-*.php 
+/index.php  
+# Config 
+wp-config.php  
+# Uploads & backups
+/wp-content/uploads/ 
+/wp-content/ai1wm-backups/ 
+/wp-content/updraft/  
+# Plugin & theme examples 
+/wp-content/plugins/hello.php 
+/wp-content/themes/twenty*/  
+# Logs 
+*.log  
+# Caches 
+/wp-content/cache  
+# Languages 
+/wp-content/languages  
+# Index blockers 
+/wp-content/index.php 
+/wp-content/plugins/index.php
+/wp-content/themes/index.php  
+# All plugins and themes (optional) 
+/wp-content/plugins 
+#/wp-content/themes

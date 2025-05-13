@@ -1,0 +1,75 @@
+.error-main {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.error-main .error-box .info {
+    width: 50%;
+}
+
+.error-main .error-box .info h1 {
+    font-size: 36px;
+    line-height: 43px;
+    max-width: 350px;
+    margin: 0 auto 16px;
+}
+
+.error-main .error-box .info p {
+    margin: 0 auto 40px;
+    max-width: 450px;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.error-main .error-box .info .ed-btn {
+    background: #101010;
+    border: 1px solid #404040;
+    color: #fff;
+}
+
+.error-main .error-box .info .ed-btn:hover {
+    color: #101010;
+    background: #fff;
+}
+
+.error-main .error-box .featured {
+    width: 50%;
+    padding: 0 8px;
+}
+
+.error-main .error-box .featured img {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .error-main {
+        padding: 40px 0;
+    }
+
+    .error-main .error-box .info {
+        width: 100%;
+        padding: 0;
+    }
+
+    .error-main .error-box .info h1 {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    .error-main .error-box .info .on-sp {
+        display: inline-block !important;
+    }
+
+    .error-main .error-box .featured {
+        width: 100%;
+        margin: 0 0 40px;
+    }
+
+    .error-main .error-box .featured img {
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
