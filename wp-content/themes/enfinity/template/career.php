@@ -37,7 +37,7 @@ $labels = get_field('enf__contact-label', 'option');
 									<p class="pri-color-3"><?= $lb['location'] ?></p>
 								</div>
 								<div class="career__hero-apply">
-									<a href="mailto:nguyenhongtruclam1@gmail.com">Apply</a>
+									<a href="mailto:info@endomondo.com">Apply</a>
 								</div>
 							</div>
 						</div>
