@@ -153,36 +153,13 @@ $app = get_field('intro_app', 'option');
                                 <img src="<?= $in['image'] ?>" alt="">
                             </div>
                             <div class="enf__investments-item-content">
-                                <h3 class="enf__investments-item-title"><?= $in['enf__investments-item-title'] ?></h3>
+                                <p class="has-large-font-size enf__investments-item-title"><?= $in['enf__investments-item-title'] ?></p>
                                 <p class="enf__investments-item-description"><?= $in['enf__investments-item-description'] ?></p>
                             </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-        </div>
-    </section>
-    <section id="enfE" class="enf__contact e">
-        <div class="container">
-            <h2 class="enf__contact-description pri-color-3">
-                <?= get_field('enf__contact-description', $pageid); ?>
-            </h2>
-            <div class="contact-form">
-                <?php
-                $labels = get_field('enf__contact-label', $pageid);
-                if ($labels):
-                    ?>
-                    <p class="label">How can we have</p>
-                    <div class="enf__contact-form-labels">
-                        <?php foreach ($labels as $key => $lb): ?>
-                            <p class="enf__contact-form-label <?= $key < 1 ? "enf__contact-form-label--active" : "" ?>">
-                                <?= $lb['label'] ?>
-                            </p>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
-                <?php echo do_shortcode('[contact-form-7 id="114" title="Contact Form"]'); ?>
-            </div>
         </div>
     </section>
     <div class="enf__scrollbar flex">
@@ -193,8 +170,6 @@ $app = get_field('intro_app', 'option');
         <div class="enf__scrollbar-item" data-target="enfC">
         </div>
         <div class="enf__scrollbar-item" data-target="enfD">
-        </div>
-        <div class="enf__scrollbar-item" data-target="enfE">
         </div>
     </div>
 </main>

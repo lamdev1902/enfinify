@@ -47,7 +47,7 @@
         <div class="container">
             <div class="menf__content flex">
                 <div class="menf__logo">
-                    <a href="#">
+                    <a href="<?php echo home_url(); ?>">
                         <img width="192" height="46" src="<?= get_field('enfinity_logo', 'option') ?>" alt="">
                     </a>
                 </div>

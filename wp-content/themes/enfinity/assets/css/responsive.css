@@ -197,7 +197,6 @@
     /* Footer 991*/
     .footer__top-info {
         display: block;
-        text-align: center;
     }
 
     .footer__top-form {
@@ -883,7 +882,7 @@
     }
 
     .enf__investments-list {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .enf__investments-item-1,
@@ -954,9 +953,46 @@
     #menu-menu-enfinity {
         gap: 20px;
     }
-	
-	.enf__scrollbar {
+
+    .enf__scrollbar {
         display: none;
+    }
+
+    /* Footer Contact */
+    .enf__contact-content {
+        flex-direction: column;
+    }
+
+    /* About Page */
+    .about__hero-top,
+    .about__hero-bottom {
+        gap: 20px;
+    }
+
+    .about__hero-top {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about__hero-item img {
+        height: 364px;
+    }
+
+    .career__hero-job {
+        gap: 10px;
+    }
+
+    .career__hero-info {
+        width: calc(80% - 10px);
+        align-items: center;
+    }
+
+    .career__hero-title {
+        width: 50%;
+    }
+
+    .page-top-white {
+        padding: 10% 0 0;
     }
 }
 
@@ -1171,7 +1207,7 @@
     }
 
     .page-top-white.mb-top-black {
-        background: #101010;
+        background: #000;
     }
 
     .page-top-white.mb-top-black a {
@@ -2570,7 +2606,7 @@
     }
 
     .enf__investments-list {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .enf__contact-form-labels {
@@ -2584,7 +2620,57 @@
 
     #menu-menu-enfinity {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
+    .contact__info-social {
+        width: 100%;
+    }
+
+    /* About Page */
+
+    .about__hero {
+        padding-top: 25%;
+    }
+
+    .about__hero-top,
+    .about__hero-bottom {
+        flex-direction: column;
+    }
+
+    .about__brand-list {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about__brand-image img {
+        margin-bottom: 40px;
+    }
+
+    .career__hero-job {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .career__hero-department {
+        width: 100%;
+    }
+
+    .career__hero-info {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .career__hero-info>div {
+        width: 100%;
+        text-align: left;
+    }
+
+    .career__hero-apply::after {
+        right: unset;
+        left: 15%;
+    }
+
 }

@@ -562,7 +562,7 @@ main {
 }
 
 .footer__top-info {
-    flex:2;
+    flex:1;
 }
 
 .footer__top-menu {
@@ -586,59 +586,65 @@ main {
     min-height: auto !important;
 }
 
+.footer__top-info input[type="email"] {
+    border: none !important;
+    border-radius: 100px !important;
+    background-color: #535353 !important;
+    color: #9F9F9F !important;
+}
+
+.klaviyo-form>.needsclick>.needsclick {
+    position: relative;
+}
+
+.klaviyo-form>.needsclick>.needsclick>div:last-child {
+    position: absolute !important;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .footer__top-form input[type="email"] {
     width: 100%;
-    height: 46px;
-    background: var(--primary-color-2) !important;
+    height: 64px !important;
+    background: #535353 !important;
     border: none;
     margin-right: 2px;
     padding: 12px 16px;
     font-size: 15px;
     line-height: 26px;
-    color: var(--primary-color-3) !important;
+    color: #9F9F9F !important;
     -webkit-appearance: none !important;
     font-family: 'Inter', sans-serif;
     vertical-align: middle;
 }
 
 .footer__top-form input[type="email"]::-webkit-input-placeholder {
-    color: var(--primary-color-3) !important;
+    color: var(--secondary-color-3) !important;
 }
 
 .footer__top-form input[type="email"]:-ms-input-placeholder {
-    color: var(--primary-color-3) !important;
+    color: var(--secondary-color-3) !important;
 }
 
 .footer__top-form input[type="email"]::-ms-input-placeholder {
-    color: var(--primary-color-3) !important;
+    color: var(--secondary-color-3) !important;
 }
 
 .footer__top-form input[type="email"]::placeholder {
-    color: var(--primary-color-3) !important;
+    color: var(--secondary-color-3) !important;
 }
 
-.footer__top-form input[type="submit"] {
-    width: 102px;
-    height: 46px;
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 15px;
-    line-height: 26px;
-    color: #101010;
-    font-weight: 500;
-    background: #fff;
-    border: none;
-    -webkit-appearance: none !important;
-    cursor: pointer;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    font-family: 'Inter', sans-serif;
-    vertical-align: middle;
+.footer__top-form button {
+    height: 28px !important;
+    border-radius: 100px !important;
+    width: fit-content;
+    padding: 10px 24px !important;
 }
 
-.footer__top-form input[type="submit"]:hover {
-    background: var(--primary-color-1);
-    color: #fff;
+.footer__top-form .needsclick .needsclick button:hover {
+    background: linear-gradient(66deg, #60D5FE 8.71%, #2FA463 90.98%) !important;
+    color: #000 !important;
 }
 
 .footer__top-form p {
@@ -694,10 +700,6 @@ main {
 
 .footer__bottom p {
     margin-bottom: 0;
-}
-
-.footer__bottom-item:first-child {
-    margin-bottom: 16px;
 }
 
 #menu-menu-footer {
@@ -759,6 +761,11 @@ main {
 .social__green {
     -webkit-filter: brightness(0) saturate(100%) invert(64%) sepia(35%) saturate(2664%) hue-rotate(34deg) brightness(93%) contrast(84%);
     filter: brightness(0) saturate(100%) invert(64%) sepia(35%) saturate(2664%) hue-rotate(34deg) brightness(93%) contrast(84%);
+}
+
+.social__grey {
+    -webkit-filter: brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(309%) hue-rotate(207deg) brightness(91%) contrast(89%);
+    filter: brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(309%) hue-rotate(207deg) brightness(91%) contrast(89%);
 }
 
 #footer .disclaimer p {
@@ -910,7 +917,7 @@ body.tag {
 }
 
 .breacrump>span span:last-child {
-    color: var(--primary-color-2);
+    color: var(--primary-color-3);
 }
 
 .woocommerce-shop .breacrump>span span:last-child {
@@ -1005,7 +1012,8 @@ body.tag {
 }
 
 .page-top-white {
-    padding: 24px 0;
+    padding: 5% 0 0;
+    background-color: #000;
 }
 
 .popup {

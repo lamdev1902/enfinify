@@ -5,7 +5,7 @@ get_header();
 the_post();
 ?>
 <main id="content">
-	<div class="page-top-white">
+	<div class="page-top-white mb-top-black">
 		<div class="container">
 			<?php
 			if (function_exists('yoast_breadcrumb')) {
@@ -14,73 +14,61 @@ the_post();
 			?>
 		</div>
 	</div>
-	<div class="container">
-		<article class="about-main special-width">
-			<div class="container-small">
-				<h1 class="text-center"><?php the_title(); ?></h1>
-				<div class="about-custom">
-					<?php the_content(); ?>
+	<?php $listContent = get_field('list_content', $pageid); ?>
+	<?php if ($listContent): ?>
+		<section class="about__hero">
+			<div class="container">
+				<div class="about__hero-list">
+					<div class="about__hero-top flex">
+						<div class="about__hero-item">
+							<h2 class="pri-color-3 about__hero-item-title"><?= $listContent[0]['title'] ?></h2>
+							<p class="pri-color-3"><?= $listContent[0]['description'] ?></p>
+						</div>
+						<div class="about__hero-item">
+							<img src="<?= $listContent[0]['image'] ?>" alt="About Page Hero Section">
+						</div>
+					</div>
+					<div class="about__hero-bottom flex">
+						<?php foreach ($listContent as $key => $val): ?>
+							<?php if ($key > 0): ?>
+								<div class="about__hero-item">
+									<p class="pri-color-3 about__hero-item-title has-large-font-size"><?= $val['title'] ?></p>
+									<p class="pri-color-3"><?= $val['description'] ?></p>
+								</div>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</div>
 				</div>
-
-				<?php $team = get_field('team', $pageid);
-				if ($team) {
-					foreach ($team as $team) {
-						?>
-						<section class="about-author">
-							<h2 class="text-center"><?php echo $team['title']; ?></h2>
-							<div class="grid grid-item">
-								<?php $team_list = $team['select_team'];
-								if ($team_list) {
-									foreach ($team_list as $team_it) {
-										$userid = $team_it['ID'];
-										$post_author_url = get_author_posts_url($userid);
-
-										?>
-										<div class="it">
-											<div class="featured image-fit">
-												<a href="<?php echo $post_author_url; ?>">
-													<?php
-													$avata = '';
-
-													if (get_field('new_avata', 'user_' . $userid)) {
-														$avata = get_field('new_avata', 'user_' . $userid);
-													} elseif (get_field('avata', 'user_' . $userid)) {
-														$avata = get_field('avata', 'user_' . $userid);
-													}
-													if ($avata) {
-														?>
-														<img src="<?php echo $avata; ?>" alt="">
-													<?php } else { ?>
-														<img src="<?php echo get_field('avatar_default', 'option'); ?>" alt="">
-													<?php } ?>
-												</a>
-											</div>
-											<div class="info">
-												<p class="has-medium-font-size"><a target="_blank" class="pri-color-2"
-														href="<?php echo $post_author_url; ?>"><?php echo $team_it['display_name']; ?></a>
-												</p>
-												<p class="sec-color-3">
-													<?= get_field('new_position', 'user_' . $userid) ?? get_field('position', 'user_' . $userid) ?>
-												</p>
-												<!-- <div class="social">
-									<?php $social = get_field('social', 'user_' . $userid);
-									if ($social) {
-										foreach ($social as $social) {
-											?>
-									<a target="_blank" href="<?php echo $social['link']; ?>"><i class="<?php echo $social['icon']; ?>"></i></a>
-									<?php }
-									} ?>
-								</div> -->
-											</div>
-										</div>
-									<?php }
-								} ?>
-							</div>
-						</section>
-					<?php }
-				} ?>
 			</div>
-		</article>
-	</div>
+		</section>
+	<?php endif; ?>
+	<?php
+	$abTitle = get_field('about__brand-title', $pageid);
+	$abDescription = get_field('about__brand-description', $pageid);
+	$abAction = get_field('about__brand-action', $pageid);
+	$abImage = get_field('about__brand-image', $pageid);
+	?>
+	<section class="about__brand">
+		<div class="container">
+			<?php if ($abTitle): ?>
+				<h2><?= $abTitle ?></h2>
+			<?php endif; ?>
+			<?php if ($abDescription): ?>
+				<p><?= $abDescription ?></p>
+			<?php endif; ?>
+			<?php if ($abAction): ?>
+				<a class="about__brand-action" href="<?= $abAction[0]['link'] ?>"><?= $abAction[0]['text'] ?></a>
+			<?php endif; ?>
+			<?php if ($abImage): ?>
+				<div class="about__brand-list flex">
+					<?php foreach ($abImage as $img): ?>
+						<div class="about__brand-image">
+							<img class="" src="<?= $img['image'] ?>" alt="">
+						</div>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+		</div>
+	</section>
 </main>
 <?php get_footer(); ?>

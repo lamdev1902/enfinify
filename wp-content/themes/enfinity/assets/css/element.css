@@ -3265,7 +3265,7 @@ body.page-template-enfinity {
     cursor: pointer;
 }
 
-.enf__scrollbar-item--active{
+.enf__scrollbar-item--active {
     width: 16.637px;
     height: 16.637px;
     border-radius: 207.959px;
@@ -3274,7 +3274,7 @@ body.page-template-enfinity {
 
 .unstick-temp {
     position: relative !important;
-  }
+}
 
 .enf>.section-flexcenter {
     display: flex;
@@ -3379,7 +3379,8 @@ body.page-template-enfinity {
 .enf__brands-description {}
 
 .enf__brands-list {
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
     gap: 20px;
 }
@@ -3483,7 +3484,7 @@ body.page-template-enfinity {
 .enf__brands-wordkouts-item-content-link {
     width: fit-content;
     display: flex;
-    padding: 17px 25px;
+    padding: 8px 25px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -3580,7 +3581,6 @@ body.page-template-enfinity {
     color: #000
 }
 
-.enf__investments-item-2 .enf__investments-item-content h3,
 .enf__investments-item-2 .enf__investments-item-content p {
     color: #fff;
 }
@@ -3642,8 +3642,8 @@ body.page-template-enfinity {
     align-items: center;
     gap: 10px;
     border-radius: 50px;
-    color: #fff;
-    background: #000;
+    color: #000;
+    background: #fff;
 }
 
 .menf__icon {
@@ -3665,19 +3665,62 @@ body.page-template-enfinity {
 .d {
     z-index: 4;
 }
+
 .e {
     z-index: 5;
 }
+
 .enf__contact {
     background-color: #000;
     height: auto !important;
     padding-top: 80px;
 }
 
-.enf__contact .contact-form {
-    background-color: #FFFFF7;
-    border-radius: 4px;
+
+.enf__contact-content {
     padding: 18px;
+    border-radius: 4px;
+    background: #151414;
+    gap: 20px;
+}
+
+.contact__info {
+    flex: 1;
+    padding: 20px;
+    background-color: #3B3B3B;
+    border-radius: 4px;
+}
+
+.contact__info p {
+    color: #9f9f9f;
+}
+
+.contact__info .contact__info-title {
+    color: #fff;
+}
+
+.contact__info .contact__info-label {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #fff;
+}
+
+.contact__info address {
+    font-style: normal;
+}
+
+.contact__info-address p {
+    margin-bottom: 24px;
+}
+
+.contact__info-address .contact__info-label,
+.contact__info-email .contact__info-label {
+    margin-bottom: 8px;
+}
+
+.enf__contact .contact-form {
+    flex: 1
 }
 
 .enf__contact form {
@@ -3689,7 +3732,7 @@ body.page-template-enfinity {
 
 .enf__contact label,
 .enf__contact .label {
-    color: #595959;
+    color: #fff;
     font-size: 18px;
     margin-bottom: 12px;
     font-weight: 500;
@@ -3702,15 +3745,17 @@ body.page-template-enfinity {
 }
 
 .enf__contact-form-label {
-    padding: 17px 25px;
+    padding: 8px 20px;
     border-radius: 4px;
-    background-color: #E3E3E3;
+    background-color: #3B3B3B;
+    color: #9f9f9f;
     font-weight: 500;
     cursor: pointer;
 }
 
-.enf__contact-form-label--active {
+.enf__contact-form-label:hover {
     background: linear-gradient(66deg, #60D5FE 8.71%, #2FA463 90.98%);
+    color: #000;
 }
 
 
@@ -3732,13 +3777,35 @@ body.page-template-enfinity {
     padding: 12px 14px;
     font-size: 16px;
     border-radius: 4px;
-    border: 0.5px solid #E3E3E3;
+    border: none;
     margin-top: 12px;
+    background-color: #3b3b3b;
+    color: #fff;
 }
 
 .enf__contact textarea {
     height: 160px;
     resize: vertical;
+}
+
+.enf__contact input.form-submit {
+    border-radius: 100px;
+    background-color: #fff;
+    color: #151414;
+    font-size: 18px;
+}
+
+.contact__info-social {
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    gap: 20px;
+}
+
+.contact__info-social a {
+    color: #9f9f9f;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .rating-symbol-foreground,
@@ -3748,4 +3815,209 @@ body.page-template-enfinity {
     -webkit-text-fill-color: transparent;
     color: transparent;
     display: inline-block;
+}
+
+/* About Page */
+.about__hero {
+    background-color: #000;
+    padding: 10% 0 40px;
+}
+
+.about__hero-top,
+.about__hero-bottom {
+    gap: 40px;
+}
+
+.about__hero-item {
+    flex: 1;
+}
+
+.about__hero-top {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.about__hero-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.about__brand {
+    padding: 10% 0 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about__brand-action {
+    display: block;
+    width: fit-content;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    background-color: #000;
+    padding: 10px 24px;
+    margin: 0 auto 40px;
+    border-radius: 100px;
+}
+
+.about__brand-action:hover {
+    background: linear-gradient(66deg, #60D5FE 8.71%, #2FA463 90.98%);
+    color: #000;
+}
+
+
+.about__brand-list {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about__brand-image {
+    flex: 1;
+}
+
+.about__brand-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.default-template {
+    background-color: #000;
+}
+
+.page-custom h2,
+.page-custom h3,
+.page-custom p,
+.page-custom span,
+.page-custom ul,
+.page-custom li {
+    color: #fff !important;
+}
+
+/* Career */
+.career__hero {
+    padding: 8% 0 40px;
+}
+
+.career__hero-job {
+    padding: 16px 0;
+    border-top: 1px solid #3B3B3B;
+    gap: 60px;
+    align-items: center;
+}
+
+.career__hero-department {
+    width: 20%;
+}
+
+.career__hero-department p {
+    padding: 5px 12px 5px 28px;
+    border-radius: 100px;
+    background-color: #3B3B3B;
+    position: relative;
+    width: fit-content;
+}
+
+.career__hero-department p::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-color: #fff;
+}
+
+.career__hero-info {
+    width: calc(80% - 60px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.career__hero-title {
+    width: 40%;
+}
+
+.career__hero-title p:hover,
+.career__hero-title.active p {
+    background: linear-gradient(96deg, #60D5FE 22.18%, #2FA463 50.26%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+}
+
+.career__hero-location {
+    text-align: center;
+    width: 20%;
+}
+
+.career__hero-apply {
+    text-align: right;
+    width: 20%;
+    position: relative;
+    padding-right: 25px;
+}
+
+.career__hero-apply a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.career__hero-apply::after {
+    content: url(../images/enfinity/apply.svg);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.career__hero-job:last-child {
+    border-bottom: 1px solid #3B3B3B;
+}
+
+.career__hero-job p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.career_job-content {
+    display: none;
+}
+
+.career_job-content.active {
+    display: block;
+}
+
+.career_job-content strong {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.career_job-content p,
+.career_job-content span, 
+.career_job-content li{
+    color: #fff;
+}
+
+.career_job-content p + ul {
+    margin-top: -20px;
+}
+
+.single-main.career_job-content ul li {
+    margin-bottom: 0;
+}
+
+.single-main.career_job-content ul li::before {
+    background-color: #fff;
 }

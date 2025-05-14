@@ -1,30 +1,76 @@
 jQuery(function ($) {
+    jQuery(document).ready(function ($) {
+        function activateByKey(key) {
+            $('.career__hero-title, .career_job-content').removeClass('active');
+
+            const $jobEl = $(`.career__hero-title[data-job="${key}"]`);
+            const $contentEl = $(`.career_job-content[data-id="${key}"]`);
+
+            $jobEl.addClass('active');
+            $contentEl.addClass('active');
+
+            if ($contentEl.length) {
+                $('html, body').animate({
+                    scrollTop: $contentEl.offset().top - 100
+                }, 100);
+            }
+        }
+
+        const hash = decodeURIComponent(window.location.hash.substring(1));
+
+        if (hash) {
+            activateByKey(hash);
+        } else {
+            const firstJobEl = $('.career__hero-title').first();
+            const firstJob = firstJobEl.data('job');
+
+            if (firstJob) {
+                $('.career__hero-title, .career_job-content').removeClass('active');
+
+                firstJobEl.addClass('active');
+                $(`.career_job-content[data-id="${firstJob}"]`).addClass('active');
+            }
+        }
+
+        $('.career__hero-title').on('click', function () {
+            const key = $(this).data('job');
+            if (key) {
+                activateByKey(key);
+                history.replaceState(null, null, `#${key}`);
+            }
+        });
+    });
+
     // Menu action 
     $('.menf__icon').click(function () {
         $('.menf__icon').toggleClass('exit');
         $('.menf__menu').slideToggle();
         return false;
     });
-	
-	if (window.innerWidth >= 1024) { 
+
+    if (window.innerWidth >= 1024) {
+
+        let isScrollingByClick = false;
 
         $('.enf__scrollbar-item').on('click', function (e) {
             e.preventDefault();
+
             const targetId = $(this).data('target');
             const $target = $('#' + targetId);
 
+            isScrollingByClick = true;
+
             if ($target.length) {
                 $target.addClass('unstick-temp');
-                void $target[0].offsetWidth; 
 
-                $('html, body').animate({
-                    scrollTop: $target.offset().top - 1
-                }, 200, function () {
-                    $target.removeClass('unstick-temp');
+                requestAnimationFrame(() => {
+                    $('html, body').animate({
+                        scrollTop: $target.offset().top - 1
+                    }, 100, function () {
+                        $target.removeClass('unstick-temp');
+                        isScrollingByClick = false;
+                    });
                 });
-
-                $('.enf__scrollbar-item').removeClass('enf__scrollbar-item--active');
-                $(this).addClass('enf__scrollbar-item--active');
             }
         });
 
@@ -32,6 +78,8 @@ jQuery(function ($) {
         const sections = $('section[id^="enf"]');
 
         $(window).on('scroll', function () {
+            if (isScrollingByClick) return;
+
             let scrollTop = $(window).scrollTop();
             let currentSectionId = null;
 
@@ -47,6 +95,7 @@ jQuery(function ($) {
                 $(`.enf__scrollbar-item[data-target="${currentSectionId}"]`).addClass('enf__scrollbar-item--active');
             }
         });
+
 
     }
 
