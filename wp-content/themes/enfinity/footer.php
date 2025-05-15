@@ -44,7 +44,7 @@
 					<div class="enf__contact-form-labels">
 						<?php foreach ($labels as $key => $lb): ?>
 							<?php if ($key <= 1): ?>
-								<a href="<?=home_url().'/ready-to-join-the-ranks/'?>#<?= str_replace(' ', '-', $lb['label']) ?>">
+								<a href="<?=home_url().'/career/'?>#<?= str_replace(' ', '-', $lb['label']) ?>">
 									<p class="enf__contact-form-label <?= $key < 1 ? "enf__contact-form-label--active" : "" ?>">
 										<?= $lb['label'] ?>
 									</p>

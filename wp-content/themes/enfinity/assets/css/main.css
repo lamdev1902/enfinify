@@ -570,14 +570,15 @@ main {
 }
 
 .footer__top-logo {
-    height: 37px;
-    width: 286px;
+    height: 46px;
+    width: 192px;
     margin-bottom: 24px;
 }
 
 .footer__top-logo img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 

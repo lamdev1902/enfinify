@@ -22,7 +22,7 @@ function theme_mcs_scripts()
     /* general css */
     wp_enqueue_style('style-slick', get_template_directory_uri() . '/assets/js/slick/slick.css');
     wp_enqueue_style('style-slick-theme', get_template_directory_uri() . '/assets/js/slick/slick-theme.css');
-    wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.3');
+    wp_enqueue_style('style-main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.4');
     wp_enqueue_style('style-custom', get_template_directory_uri() . '/assets/css/custom.css', '', '1.0.0');
     wp_enqueue_style('style-base', get_template_directory_uri() . '/assets/css/base.css', '', '1.0.1');
 
