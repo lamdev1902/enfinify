@@ -4006,7 +4006,8 @@ body.page-template-enfinity {
 
 .career_job-content p,
 .career_job-content span, 
-.career_job-content li{
+.career_job-content li,
+.career_job-content {
     color: #fff;
 }
 
